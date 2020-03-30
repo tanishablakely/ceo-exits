@@ -1,6 +1,6 @@
 # import necessary libraries
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 import os
 
 # create instance of Flask app
