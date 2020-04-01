@@ -10,5 +10,9 @@
   "type": "module",
   "peerDependencies": {
     "@observablehq/runtime": "4"
+  },
+  "dependencies": {
+    "@mbostock/revenue-by-music-format-1973-2018": "https://api.observablehq.com/@mbostock/revenue-by-music-format-1973-2018.tgz?v=3",
+    "@observablehq/runtime": "^4.7.0"
   }
 }
