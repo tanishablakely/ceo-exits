@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Industry Overview - CEO Exits Analysis</title>
+
+  <!-- Custom fonts for this template-->
+  
+  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="{{ url_for('static', filename='css/sb-admin-2.min.css') }}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <a class="navbar-brand" href="#">CEO Exits Analysis</a>
+          <span class="navbar-text float-right">
+              Data Team: Tanisha Blakely, Abe Jones, Dharti Patel, Alap Raval
+          </span>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h4 class="h4 mb-0 text-gray-800">Exits by Industry Type</h4>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Years Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Years</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CEO Exits Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total CEO  Exits</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">6,721</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Industry Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Industries</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">30</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Highest Industry Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Highest Industry Exits</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Government/Non-Profit</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Industry Overview</h6>
+                </div>
+                
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div id='myDiv'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-12">
+              <!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Summary</h6>
+                </div>
+                <div class="card-body">
+                  <p>In 2019, <a href="http://www.challengergray.com/press/press-releases/2019-august-ceo-turnover-report-another-record-159-ceos-leave-posts" target="_blank">Challenger, Gray & Christmas</a> reported a record number of CEOs who stepped down from their companies. The Government/Non-Profit sector lead all sectors in CEO exits with 218 by August. According Challenger, the Technology sector announced the second-highest number of CEO changes in August 2019 with 134, up 34% from the 99 who left their posts through August 2018.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+         <!-- Table Body -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body">
+                <table id="summary_table" class="table table-bordered display">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Industry</th>
+                      <th>2015</th>
+                      <th>2016</th>
+                      <th>2017</th>
+                      <th>2018</th>
+                      <th>2019</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>Aerospace/Defense</td>
+                      <td>9</td>
+                      <td>14</td>
+                      <td>8</td>
+                      <td>12</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>Apparel</td>
+                      <td>12</td>
+                      <td>9</td>
+                      <td>0</td>
+                      <td>4</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Automotive</td>
+                      <td>25</td>
+                      <td>18</td>
+                      <td>5</td>
+                      <td>24</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Cannabis</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Chemical</td>
+                      <td>13</td>
+                      <td>9</td>
+                      <td>5</td>
+                      <td>8</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>Commodities</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>12</td>
+                      <td>5</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <th>6</th>
+                      <td>Computer</td>
+                      <td>107</td>
+                      <td>132</td>
+                      <td>97</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th>7</th>
+                      <td>Construction</td>
+                      <td>10</td>
+                      <td>13</td>
+                      <td>7</td>
+                      <td>19</td>
+                      <td>17</td>
+                    </tr>
+                    <tr>
+                      <th>8</th>
+                      <td>Consumer Products</td>
+                      <td>34</td>
+                      <td>35</td>
+                      <td>30</td>
+                      <td>39</td>
+                      <td>30</td>
+                    </tr>
+                    <tr>
+                      <th>9</th>
+                      <td>Electronics</td>
+                      <td>13</td>
+                      <td>12</td>
+                      <td>14</td>
+                      <td>25</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <th>10</th>
+                      <td>Energy</td>
+                      <td>41</td>
+                      <td>35</td>
+                      <td>35</td>
+                      <td>30</td>
+                      <td>59</td>
+                    </tr>
+                    <tr>
+                      <th>11</th>
+                      <td>Entertainment/Leisure</td>
+                      <td>65</td>
+                      <td>73</td>
+                      <td>60</td>
+                      <td>55</td>
+                      <td>75</td>
+                    </tr>
+                    <tr>
+                      <th>12</th>
+                      <td>Financial</td>
+                      <td>137</td>
+                      <td>156</td>
+                      <td>119</td>
+                      <td>154</td>
+                      <td>129</td>
+                    </tr>
+                    <tr>
+                      <th>13</th>
+                      <td>FinTech</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <th>14</th>
+                      <td>Food</td>
+                      <td>34</td>
+                      <td>23</td>
+                      <td>31</td>
+                      <td>40</td>
+                      <td>70</td>
+                    </tr>
+                    <tr>
+                      <th>15</th>
+                      <td>Government/Non-Profit</td>
+                      <td>188</td>
+                      <td>204</td>
+                      <td>191</td>
+                      <td>276</td>
+                      <td>339</td>
+                    </tr>
+                    <tr>
+                      <th>16</th>
+                      <td>Health Care/Products</td>
+                      <td>93</td>
+                      <td>87</td>
+                      <td>105</td>
+                      <td>131</td>
+                      <td>107</td>
+                    </tr>
+                    <tr>
+                      <th>17</th>
+                      <td>Hospitals</td>
+                      <td>137</td>
+                      <td>154</td>
+                      <td>107</td>
+                      <td>139</td>
+                      <td>121</td>
+                    </tr>
+                    <tr>
+                      <th>18</th>
+                      <td>Industrial Goods</td>
+                      <td>38</td>
+                      <td>29</td>
+                      <td>34</td>
+                      <td>42</td>
+                      <td>57</td>
+                    </tr>
+                    <tr>
+                      <th>19</th>
+                      <td>Insurance</td>
+                      <td>24</td>
+                      <td>16</td>
+                      <td>26</td>
+                      <td>16</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <th>20</th>
+                      <td>Legal</td>
+                      <td>5</td>
+                      <td>4</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <th>21</th>
+                      <td>Media</td>
+                      <td>25</td>
+                      <td>33</td>
+                      <td>17</td>
+                      <td>25</td>
+                      <td>28</td>
+                    </tr>
+                    <tr>
+                      <th>22</th>
+                      <td>Pharmaceutical</td>
+                      <td>42</td>
+                      <td>37</td>
+                      <td>47</td>
+                      <td>48</td>
+                      <td>61</td>
+                    </tr>
+                    <tr>
+                      <th>23</th>
+                      <td>Real Estate</td>
+                      <td>27</td>
+                      <td>27</td>
+                      <td>14</td>
+                      <td>27</td>
+                      <td>31</td>
+                    </tr>
+                    <tr>
+                      <th>24</th>
+                      <td>Retail</td>
+                      <td>34</td>
+                      <td>37</td>
+                      <td>41</td>
+                      <td>35</td>
+                      <td>63</td>
+                    </tr>
+                    <tr>
+                      <th>25</th>
+                      <td>Services</td>
+                      <td>44</td>
+                      <td>42</td>
+                      <td>110</td>
+                      <td>85</td>
+                      <td>84</td>
+                    </tr>
+                    <tr>
+                      <th>26</th>
+                      <td>Technology</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>152</td>
+                      <td>216</td>
+                    </tr>
+                    <tr>
+                      <th>27</th>
+                      <td>Telecommunications</td>
+                      <td>13</td>
+                      <td>9</td>
+                      <td>12</td>
+                      <td>10</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <th>28</th>
+                      <td>Transportation</td>
+                      <td>36</td>
+                      <td>19</td>
+                      <td>25</td>
+                      <td>27</td>
+                      <td>31</td>
+                    </tr>
+                    <tr>
+                      <th>29</th>
+                      <td>Utility</td>
+                      <td>14</td>
+                      <td>18</td>
+                      <td>6</td>
+                      <td>21</td>
+                      <td>17</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>    
+            </div>
+          </div>
+         
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Team SouthSiders 2019-2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="{{ url_for('static', filename='js/sb-admin-2.min.js') }}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{{ url_for('static', filename='vendor/chart.js/Chart.min.js') }}"></script>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+  <!-- Page level custom scripts -->
+  <script src="{{ url_for('static', filename='js/demo/chart-area-demo.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/demo/chart-pie-demo.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/demo/chart-bar-demo.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/industry-plots.js') }}"></script>
+
+</body>
+</html>
