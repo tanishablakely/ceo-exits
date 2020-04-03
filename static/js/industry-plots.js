@@ -217,3 +217,7 @@ var cannabis = {
   };
   
   Plotly.newPlot('myDiv', data, layout);
+
+  $(document).ready( function () {
+    $('#summary_table').DataTable();
+} );
