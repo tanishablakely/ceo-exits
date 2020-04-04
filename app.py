@@ -1,5 +1,6 @@
 # import necessary libraries
 from flask import Flask, render_template
+
 # from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -14,6 +15,6 @@ def index():
 @app.route("/industry")
 def industry():
     return render_template("industry.html", text="industry page")
-
+    
 if __name__ == "__main__":
     app.run(debug=True, extra_files='index.html')
