@@ -12,8 +12,9 @@
   <title>CEO Turnover Report</title>
 
   <!-- Custom fonts for this template-->
-  
-  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+
+  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+    type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
@@ -49,8 +50,7 @@
           </div>
 
           <!-- Content Row -->
-          <!-- <div class="row"> -->
-
+          <div class="row">
             <!-- Years Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
@@ -66,7 +66,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
             <!-- CEO Exits Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
@@ -74,7 +74,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total CEO  Exits</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total CEO Exits</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">6,721</div>
                     </div>
                     <div class="col-auto">
@@ -83,7 +83,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
             <!-- Industry Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
@@ -100,7 +100,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
             <!-- Highest Industry Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
@@ -108,7 +108,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Highest Industry Exits</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Highest Industry Exits
+                      </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Government/Non-Profit</div>
                     </div>
                     <div class="col-auto">
@@ -118,13 +119,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
-
-          <!-- Content Row -->
-
-          <div class="row">
-
-            
+          </div>
 
           <!-- Content Row -->
           <div class="row">
@@ -140,78 +135,26 @@
                   <img class="card-img-top" src="/static/img/industry-plot.png" alt="CEO Exits by Industry">
 
                   <hr>
-                  <a href="industry" class="btn btn-primary">View Chart</a> 
+                  <a href="industry" class="btn btn-primary">View Chart</a>
                 </div>
-              </div>
-
-            <!-- Stock Market Illustration -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Stock Performance</h6>
-              </div>
-              <div class="card-body">
-                <img class="card-img-top" src="/static/img/stock-performance.png" alt="Stock Performance">
-
-                <hr>
-                <a href="stock-index" class="btn btn-primary">View Chart</a> 
               </div>
             </div>
+            <div class="col-lg-6 mb-4">
+              <!-- Stock Market Illustration -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Stock Performance</h6>
+                </div>
+                <div class="card-body">
+                  <img class="card-img-top" src="/static/img/stock-performance.png" alt="Stock Performance">
 
-            <!-- Color System -->
-            <div class="row">
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-primary text-white shadow">
-                  <div class="card-body">
-                    Primary
-                    <div class="text-white-50 small">#4e73df</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-success text-white shadow">
-                  <div class="card-body">
-                    Success
-                    <div class="text-white-50 small">#1cc88a</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-info text-white shadow">
-                  <div class="card-body">
-                    Info
-                    <div class="text-white-50 small">#36b9cc</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-warning text-white shadow">
-                  <div class="card-body">
-                    Warning
-                    <div class="text-white-50 small">#f6c23e</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-danger text-white shadow">
-                  <div class="card-body">
-                    Danger
-                    <div class="text-white-50 small">#e74a3b</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-4">
-                <div class="card bg-secondary text-white shadow">
-                  <div class="card-body">
-                    Secondary
-                    <div class="text-white-50 small">#858796</div>
-                  </div>
+                  <hr>
+                  <a href="stock-index" class="btn btn-primary">View Chart</a>
                 </div>
               </div>
             </div>
 
-          </div>
-
-          <div class="col-lg-6 mb-4">  
+            <div class="col-lg-12 mb-4">
 
               <!-- Approach -->
               <div class="card shadow mb-4">
@@ -221,19 +164,43 @@
                 <div class="card-body">
                   <p>In 2019 there was a record number of CEOs who stepped down from their companies.</p>
 
-                  <p>Chief Executive Officer turnover jumped 8%, from 148 in November to 160 in December, the second-highest monthly total since <a href="http://www.challengergray.com/press/press-releases/2019-year-end-ceo-report-160-ceos-out-december-highest-annual-quarterly-totals" target="_blank">Challenger, Gray & Christmas</a>
- began tracking CEO departures in 2002.</p>
+                  <p>Chief Executive Officer turnover jumped 8%, from 148 in November to 160 in December, the
+                    second-highest monthly total since <a
+                      href="http://www.challengergray.com/press/press-releases/2019-year-end-ceo-report-160-ceos-out-december-highest-annual-quarterly-totals"
+                      target="_blank">Challenger, Gray & Christmas</a>
+                    began tracking CEO departures in 2002.</p>
 
-                  <p>According to the Challenger CEO Turnover Report, the Government/Non-Profit sector leads all industries in CEO turnover with 339 in 2019. That is 22.8% more than the 276 chief executives who left their positions the previous year. These companies include government agencies, tourism and transportation authorities, Chambers of Commerce, education companies, charities, and foundations.</p>
+                  <p>According to the Challenger CEO Turnover Report, the Government/Non-Profit sector leads all
+                    industries in CEO turnover with 339 in 2019. That is 22.8% more than the 276 chief executives who
+                    left their positions the previous year. These companies include government agencies, tourism and
+                    transportation authorities, Chambers of Commerce, education companies, charities, and foundations.
+                  </p>
 
-                  <p>The Technology sector follows with 216 CEO changes, up 42% from the 152 announced in 2018. Financial companies have announced the third-highest number of CEO changes with 129, down 16% from the 154 Financial sector CEOs who left in 2018.</p>
+                  <p>The Technology sector follows with 216 CEO changes, up 42% from the 152 announced in 2018.
+                    Financial companies have announced the third-highest number of CEO changes with 129, down 16% from
+                    the 154 Financial sector CEOs who left in 2018.</p>
 
-                  <p>Hospitals announced 121 CEO changes last year, down 12.9% from the 139 who left their posts through the same period the year prior.</p>
+                  <p>Hospitals announced 121 CEO changes last year, down 12.9% from the 139 who left their posts through
+                    the same period the year prior.</p>
 
-                  <p>Eleven chief executives from the budding cannabis industry left their posts in 2019, the first year Challenger tracked the industry.</p>
+                  <p>Eleven chief executives from the budding cannabis industry left their posts in 2019, the first year
+                    Challenger tracked the industry.</p>
                 </div>
               </div>
 
+            </div>
+            <div class="col-lg-12 mb-4">
+              <div id="d3BarChart" class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                  <div class="dropdown no-arrow"></div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area"></div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -263,7 +230,7 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-  
+
   </div>
 
   <!-- Bootstrap core JavaScript-->
@@ -283,7 +250,8 @@
   <!-- Page level custom scripts -->
   <!-- <script src="{{ url_for('static', filename='js/demo/chart-area-demo.js') }}"></script> -->
   <!-- <script src="{{ url_for('static', filename='js/demo/chart-pie-demo.js') }}"></script> -->
-  <script src="{{ url_for('static', filename='js/demo/chart-bar-demo.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/demo/d3-chart-bar.js') }}"></script>  
+  <!-- <script src="{{ url_for('static', filename='js/demo/chart-bar-demo.js') }}"></script> -->
+  <script src="{{ url_for('static', filename='js/demo/d3-chart-bar.js') }}"></script>
 </body>
+
 </html>
